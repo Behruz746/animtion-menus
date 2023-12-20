@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.tabs {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+    position: relative;
+    border-radius: 4px;
+    // var index undeline
+    --active-tab: 1;
+    
+    .tab {
+        width: 100px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .undeline {
+        position: absolute;
+        bottom: 0;
+        left: calc(var(--active-tab) * 100px); // position undeli
+        width: 100px;
+        height: 4px;
+        background-color: #d00;
+        border-radius: 4px;
+        transition: .3s ease-in-out;
+    }
+}
